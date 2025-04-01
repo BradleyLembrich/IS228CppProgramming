@@ -10,11 +10,8 @@ using namespace std;
 class Mode {
 public:
     std::vector <int> sequence;
-    //std::string userInput;
-    //std::string clearCommand;
     int pauseTime;
     int maxNum;
-    //int sequenceLength = 1;
     int wins = 0;
 
     // Constructor
@@ -38,7 +35,7 @@ public:
     }
 
     void generateSequence(){
-            sequence.push_back(rand() % maxNum);
+            sequence.push_back(rand() % maxNum + 1);
     }
 
     void displaySequence(){
@@ -133,7 +130,7 @@ int main() {
         break;
     }
     case 3:
-        cout << "Hard mode not yet implemented";
+        cout << "Extreme mode not yet implemented";
         break;
     default: 
         cout << "Invalid selection";
